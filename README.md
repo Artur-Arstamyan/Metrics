@@ -1,6 +1,6 @@
 # ROC Curve, AUC
 
-
+**Importing**
 ```python
 from sklearn.datasets import make_classification
 from sklearn.linear_model import LogisticRegression
@@ -9,55 +9,35 @@ from sklearn.metrics import roc_curve
 from sklearn.metrics import roc_auc_score
 from matplotlib import pyplot as plt
 ```
-
-Generating 2 class dataset
-
-
+**Generating 2 class dataset**
 ```python
 X, y = make_classification(n_samples=1000, n_classes=2, random_state=1)
 # split into train/test sets
 trainX, testX, trainy, testy = train_test_split(X, y, test_size=0.5, random_state=2)
 ```
-
-Fitting a model
-
-
+**Fitting a model**
 ```python
 model = LogisticRegression(solver='lbfgs')
 model.fit(trainX, trainy)
 ```
-
-    0.834
-    
-
-Predicting probabilities
-
-
+**Predicting probabilities**
 ```python
 lr_probs = model.predict_proba(testX)
 ```
-
-Keeping probabilities for the positive outcome only
-
-
+**Keeping probabilities for the positive outcome only**
 ```python
 lr_probs = lr_probs[:, 1]
 ```
-
-Calculating score
-
-
+**Calculating score**
 ```python
 lr_auc = roc_auc_score(testy, lr_probs)
 print('Logistic: ROC AUC=%.5f' % (lr_auc))
 ```
-
-    Logistic: ROC AUC=0.90282
-    
-
-Plotting roc curve
-
-
+**Output**
+```
+Logistic: ROC AUC=0.90282
+```
+**Plotting roc curve**
 ```python
 lr_fpr, lr_tpr, _ = roc_curve(testy, lr_probs)
 # plot the roc curve for the model
@@ -70,16 +50,9 @@ plt.legend()
 # show the plot
 plt.show()
 ```
-
-
-    
+**Output**
 ![png](output_15_0.png)
-    
-
-
-# Implementing roc_auc_score and roc_curve functions on our own
-
-
+# Implementing roc_curve and roc_auc_score functions on our own
 ```python
 import numpy as np
 def roc_curve1(testy, probs):
@@ -123,17 +96,8 @@ plt.legend()
 plt.show()
 print(roc_auc_score1(testy, lr_probs))
 ```
+**Output**
 
-
-    
 ![png](output_18_0.png)
     
-
-
-    0.9020032051282039
-    
-
-
-```python
-
-```
+0.9020032051282039
