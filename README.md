@@ -1,5 +1,5 @@
-# ROC Curve, AUC
-
+# ROC(Receiver Operating Characteristic) Curve, AUC(Area Under the Curve)
+## Implementing with sklearn
 **Importing**
 ```python
 from sklearn.datasets import make_classification
@@ -53,7 +53,7 @@ plt.show()
 **Output**  
 
 ![png](output_15_0.png)
-# Implementing roc_curve and roc_auc_score functions on our own
+## Implementing roc_curve and roc_auc_score functions on our own
 ```python
 import numpy as np
 def roc_curve1(testy, probs):
