@@ -50,7 +50,8 @@ plt.legend()
 # show the plot
 plt.show()
 ```
-**Output**
+**Output**  
+
 ![png](output_15_0.png)
 # Implementing roc_curve and roc_auc_score functions on our own
 ```python
