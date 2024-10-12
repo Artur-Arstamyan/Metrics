@@ -1,3 +1,9 @@
+For balanced datasets: 
+- accuracy = (tpr+tnr)/2 = tpr/2 + (1-fpr)/2 = 1/2 + (tpr-fpr)/2
+- 2*accuracy = 1 + tpr - fpr
+- tpr - fpr = 2*accuracy - 1
+So for balanced datasets the threshold at which **tpr - fpr** is at maximum is the threshold at which **accuracy** is at the maximum.
+
 # ROC(Receiver Operating Characteristic) Curve, AUC(Area Under the Curve)
 ## Implementing with sklearn
 **Importing**
