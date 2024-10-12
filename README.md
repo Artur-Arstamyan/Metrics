@@ -1,6 +1,6 @@
 accuracy = (tp + tn)/(tp+fn+tn+fp)    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= tp/(tp+fn) * (tp+fn)/(tp+fn+tn+fp) + tn/(tn+fp) * (tn+fp)/(tp+fn+tn+fp)    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= tpr*(proportion of actual poitives) + tnr*(proportion of actual negatives)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= tp/(tp+fn) * (tp+fn)/(tp+fn+tn+fp) + tn/(tn+fp) * (tn+fp)/(tp+fn+tn+fp)    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= tpr*(proportion of actual poitives) + tnr*(proportion of actual negatives)  
 For balanced datasets: 
 - accuracy = tpr/2+tnr/2 = tpr/2 + (1-fpr)/2 = 1/2 + (tpr-fpr)/2
 - 2*accuracy = 1 + tpr - fpr
